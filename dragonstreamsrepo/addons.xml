@@ -2,7 +2,7 @@
 <addons>
 <addon
   id="plugin.video.dragon.streams"
-  version="1.8.6.9"
+  version="1.8.7.0"
   name="DragonStreams"
   provider-name="Unknown">
   <requires>
