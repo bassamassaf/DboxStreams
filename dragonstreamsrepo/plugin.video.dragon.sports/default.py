@@ -465,7 +465,7 @@ print "Name: "+str(name)
 if mode==None:
     print "getData"
     # if using a remote file uncomment the following line
-    data = 'http://pastebin.com/raw.php?i=KZdFyggV' 
+    data = 'http://intech-av.com/K1m05/File1.xml' 
     # if using a local file uncomment the following line
     # data = os.path.join(home, 'my.xml')
     getData(data, fanart)
