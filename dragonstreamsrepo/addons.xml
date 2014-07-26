@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon
+  id="plugin.video.dragon.sports"
+  version="1.9.2"
+  name="Dragon Streams"
+  provider-name="Unknown">
+  <requires>
+   <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Dragon Streams</summary>
+    <description>Dragon Streams</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.dragonstreams" name="DragonStreams Repo" version="1.0" provider-name="DragonStreams">
+	<extension point="xbmc.addon.repository" name="DragonStreams">
+		<info compressed="false">http://github.com/DBoxStreams/DboxStreams/raw/master/dragonstreamsrepo/addons.xml</info>
+		<checksum>http://github.com/DBoxStreams/DboxStreams/raw/master/dragonstreamsrepo/addons.xml.md5</checksum>
+		<datadir zip="true">http://github.com/DBoxStreams/DboxStreams/raw/master/dragonstreamsrepo/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo for DragonStreams</summary>
+		<description>Repo for DragonStreams</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
