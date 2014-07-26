@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.dragon.sports"
-       name="Dragon Sports"
-       version="1.2.1"
-       provider-name="Unknown">
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.dragon.sports"
+  version="1.9.2"
+  name="Dragon Streams"
+  provider-name="Unknown">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.beautifulsoup" version="3.0.8"/>
-    <import addon="script.module.simplejson" />
+   <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
   </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Dragon Sports</summary>
-    <description>Watch Live Sporting Events from your Dragon Box</description>
+    <summary>Dragon Streams</summary>
+    <description>Dragon Streams</description>
     <platform>all</platform>
   </extension>
 </addon>
