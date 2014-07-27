@@ -2,7 +2,7 @@
 <addons>
 <addon
   id="plugin.video.dragon.sports"
-  version="1.9.4"
+  version="1.9.5"
   name="Dragon Streams"
   provider-name="Unknown">
   <requires>
