@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.DocFilmStory"
+	name="DocFilmStory"
+	version="1.0.3"
+	provider-name="The Dragon Box">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">DocFilmStory</summary>
+    <description lang="en">DocFilmStory</description>
+    <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
