@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.devinsupertramp"
+	name="DevinSuperTramp"
+	version="1.0.3"
+	provider-name="DragonBox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">DevinSuperTramp</summary>
+    <description lang="en">High Quality fun videos filmed by Devin Graham</description>
+    <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.DocFilmStory"
+	name="DocFilmStory"
+	version="1.0.3"
+	provider-name="The Dragon Box">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">DocFilmStory</summary>
+    <description lang="en">DocFilmStory</description>
+    <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.dragon.sports"
   version="1.9.6"
@@ -18,6 +56,26 @@
     <summary>Dragon Streams</summary>
     <description>Dragon Streams</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.surfer"
+	name="Surfer Magazine"
+	version="1.0.3"
+	provider-name="DragonBox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Surfer Magazine</summary>
+    <description lang="en">The magazine was founded by John Severson in 1959 as a program to accompany his yearly surf films. Severson's photography, art and sense of humour set the pace for the future of Surfer, which quickly grew to be a reflection of the sport and culture, as well as a sounding board for surfers and environmental activists. Since 1959, Surfer Magazine has used its publication as a means of bringing readers a slice of the entire surfing world. Its editor-in-chief is Brendon Thomas; the photo editor is Grant Ellis.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/official-xbmc-hub-repo/</forum>
+    <website>http://www.thedragonbox.com/</website>
   </extension>
 </addon>
 
