@@ -38,6 +38,25 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.DocumentarizTV"
+	name="DocumentarizTV"
+	version="1.0.3"
+	provider-name="DragonBox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">DocumentarizTV</summary>
+    <description lang="en">DocumentarizTV</description>
+    <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.dragon.sports"
   version="1.9.9"
