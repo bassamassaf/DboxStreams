@@ -13,6 +13,6 @@ item_info_convert=getInfo('%s','.*?<video src="([^'"]+)" system-bitrate="[^'"]+"
 item_info_build=%s
 
 item_info_name=url
-item_info_from=http://' + url.tmp + '/livestreamiphone/' + bitrate + '/master.m3u8
+item_info_from=http://livestream-f.akamaihd.net/' + bitrate + '|User-Agent=Roku/DVP-4.1 (024.01E01250A)
 item_info_build=%s
 
