@@ -4,7 +4,7 @@ item_info_build=XXCast - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://xxcast.pm/stream%s.html
+item_info_build=http://xxcast.pm/player3.php?id=%s&width=640&height=460
 
 item_info_name=tmp3
 item_info_from=pageUrl
