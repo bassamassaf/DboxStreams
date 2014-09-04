@@ -1,2 +1,5 @@
+[B]Version 2.0.2[/B]
+- NFL Should link up good now.
+
 [B]Version 1.9.6[/B]
 - Fix Schedule
