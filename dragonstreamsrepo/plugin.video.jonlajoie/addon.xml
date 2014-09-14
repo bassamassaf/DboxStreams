@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.jonlajoie"
+	name="Jon Lajoie"
+	version="1.0.3"
+	provider-name="DragonBox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Jon Lajoie</summary>
+    <description lang="en">My name is Jon, I am from Montreal, Canada, and I make videos once in a while. I also act on a show called "The League," and I tour sometimes. Want to be my friend? www.jonlajoie.com</description>
+    <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
