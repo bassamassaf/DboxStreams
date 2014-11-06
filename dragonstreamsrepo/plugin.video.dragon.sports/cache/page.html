@@ -1,7 +1,282 @@
-<title>[COLOR=FF00FF00]National[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png</image><url>http://xrxs.net/video/live-p12netw-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Arizona[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12ariz-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Bay Area[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12baya-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Los Angeles[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12losa-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Mountain[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12moun-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Oregon[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12oreg-2328.m3u8</url>
-<title>[COLOR=FF00FF00]Washington[/COLOR]</title><image>http://x.pac-12.com/sites/default/files/styles/main_image-8-by-4/public/Pac12logo100x100.png?itok=FfisyKmY</image><url>http://xrxs.net/video/live-p12wash-2328.m3u8</url>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Ilive.to Watch Live TV Online - Live Sport Online</title>
+  <meta name="keywords" content="watch live channels, live, channel, streaming, broadcast, music, videos, sport, television, movies, football, soccer, player" />
+  <meta name="description" content="Ilive.to Embed Player" />
+	<script>
+		if (top.location == self.location) {
+			top.location = "http://www.ilive.to/view/67439/24x7 WWE NETWORK LIVE STREAMlive-stream-channel";
+		}
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+	<script>
+
+cdInterval=null;
+playing = false;
+
+
+
+function likeClicked() {
+	document.getElementById("like_overlay").style.display="block";						
+	document.getElementById("like_iframe").src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Filive.to&send=false&layout=standard&width=320&show_faces=false&action=like&colorscheme=light&font&height=85";
+}
+function removeLike() {
+	document.getElementById("like_overlay").style.display="none";
+}
+function clickListener() {
+	window.open("http://www.myfact.tv/el-clasico-barcelona-vs-real-mandrid/");
+}
+function openChannel() {
+	window.open("http://www.ilive.to/view/67439/24x7 WWE NETWORK LIVE STREAMlive-stream-channel");
+}
+
+
+function removeOverlayHTML()
+{
+	document.getElementById("ad_overlay").style.display="none";
+	document.getElementById("ad_overlay_countdown").style.display="none";
+	document.getElementById("overlay_iframe").src = "";
+	clearInterval(cdInterval);
+			if (!playing) {
+			try {
+				thisMovie("dplayer").letsplay(0);
+			}
+			catch(err) {}
+		}
+		
+	playing = true;
+	// show banner again after 600000ms = 600s = 10min
+	setTimeout(function(){
+		setOverlayHTML();
+	}, 600000);	
+}
+
+
+function thisMovie(movieName) {
+	 if (navigator.appName.indexOf("Microsoft") != -1) {
+		 return window.document[movieName];
+	 } else {
+		 return document.getElementById(movieName);
+	 }
+ }
+function setOverlayHTML()
+{
+			document.getElementById("overlay_iframe").src = "http://static.ilive.to/ads/embed/600x300.html";
+		document.getElementById("ad_overlay_countdown").style.display="block";
+		document.getElementById("countdownnum").innerHTML="30";
+		document.getElementById("ad_overlay_close").style.display="none";
+		document.getElementById("ad_overlay").style.display="block";
+		cdInterval=setInterval("countDown()",1000);
+	}
+
+setInterval(function(){setFooterHTML()},300000)
+{
+function setFooterHTML()
+{
+		document.getElementById("footer_iframe").src = "http://static.ilive.to/ads/embed/468x60.html";
+	document.getElementById("ad_footer").style.display="block";
+	}
+}
+function removeFooterHTML()
+{
+	document.getElementById("ad_footer").style.display="none";
+}
+function countDown()
+{
+	currentCD=parseInt(document.getElementById("countdownnum").innerHTML);
+	if (currentCD==1) document.getElementById("ad_overlay_close").style.display="block";
+	//  if (currentCD==0)
+	//	removeOverlayHTML();
+        
+	//else
+		document.getElementById("countdownnum").innerHTML=(currentCD-1);
+
+}
+
+function OpenWindow(url, name, width, height, isResizeAble)
+{
+	var left = Math.round((screen.width - width) / 2);
+	var top = Math.round((screen.height - height) / 2);
+	var styleStr = 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no';
+		styleStr += ',resizable=' + (isResizeAble ? 'yes' : 'no');
+		styleStr += ',width=' + width + ',height=' + height;
+		styleStr += ',left=' + left + ',top=' + top;
+		styleStr += ',screenX=' + left + ',screenY=' + top;
+	window.open(url, name, styleStr);
+}
+
+
+
+</script>
+
+
+<!--Adblockplus detector and block -->
+<script type="text/javascript" src="http://concutao.tk/js/ads.js"></script>
+
+<script type="text/javascript">
+	if (document.getElementById("tester") != undefined)
+	{
+	    document.write('');
+	}
+	else
+	{
+	document.write('<iframe src=\"http://www.ilive.to/images/adsblocker.png\" width=\"800\" height=\"800\">If you want to watch with no ads, <a href=\"http://www.ilive.to/premium\">click here to sign up</a></iframe>');
+
+	}
+</script>
+
+<!--Redirection script to mobile device -->
+<script src="http://www.ilive.to/js/redirection_mobile.js"></script>
+<script>
+             SA.redirection_mobile ({
+                noredirection_param:"noredirection",
+	         tablet_redirection : "true",
+		  mobile_url : "mobile.ilive.to/m/index_embed.html",
+                mobile_prefix : "http",
+                cookie_hours : "2" 
+            });
+        </script>
+<!-- End redirection script -->
+
+</head>
+
+
+<body onContextMenu="return false;" onSelectStart="return false;" onDragStart="return false;" onCopy="return false;" onCut="return false;" style="margin:0;padding:0">
+<div style="position:relative;text-align:left;width:640px;height:400px;background:#000;">
+	<div id="ad_overlay" style="width:640px;height:400px;position:absolute;top:0px;z-index:1;display:none;">
+		<div id="ad_overlay_countdown" style="width:640px;position:absolute;top:25px;0px;text-align:center;color:#fff;font-size:13px;z-index:1;">This channel will start in <span id="countdownnum"></span> seconds. To remove waiting time, <a style="color:white;" href="http://www.ilive.to/premium" target="_blank">buy a Premium Membership<a/></div>
+		<div id="ad_overlay_close" style="position:absolute;top:78px;right:23px;border:0;z-index:5"><a href="javascript:void(0)" onclick="removeOverlayHTML()"><img galleryimg=no  src="http://www.streamlive.to/player/images/close_button.png" alt="x" width="12px" height="12px" /></a></div>
+		<div id="ad_overlay_content" style="z-index:4;font-size:0;width:600px;height:290px;position:absolute;top:55px;left:20px;background:transparent;"><iframe id="overlay_iframe" frameborder='0' marginheight='0' marginwidth='0' scrolling='no' width='600' height='290'></iframe></div>
+		               
+        </div>
+
+	<div id="like_overlay" style="background:#ECEEF5;border:1px solid #748BB8;height:100px;width:330px;padding:5px;position:absolute;z-index:1;top:100px;left:150px;display:none">
+		<iframe id='like_iframe' frameborder='0' marginheight='0' marginwidth='0' scrolling='no' width='330px' height='100' style="border: 1px solid #8DA0C6;"></iframe>
+		<a href="javascript:void(0)" onclick="removeLike()"><img galleryimg=no  style="position:absolute;top:3px;right:3px;border:0;z-index:1000" src="http://www.streamlive.to/player/images/close_button_small.png" alt="x" /></a>
+	</div>
+
+	<div id="ad_footer" style="width:100%;height:90px;position:absolute;z-index:1;bottom:26px;left:0;display:none">
+		<div id="ad_footer_content" style="position:absolute;width:100%;height:100%;"><iframe id='footer_iframe' frameborder='0' marginheight='0' marginwidth='0' scrolling='no' width='100%' height='100%'></iframe></div>
+		<a href="javascript:void(0)" onclick="removeFooterHTML()"><img galleryimg=no  style="position:absolute;top:3px;right:3px;border:0;z-index:1000" src="http://www.streamlive.to/player/images/close_button_small.png" alt="x" /></a>
+	</div>
+
+
+<div id="dplayer" style="width:640px;height:400px"></div>
+<script data-cfasync="false" type="text/javascript" src="http://www.streamlive.to/player/ova/ova-examples.js"></script>
+<script data-cfasync="false" type="text/javascript" src="http://www.streamlive.to/player/ova/jwplayer.js"></script>
+
+<script type="text/javascript">
+
+var token="";
+		$.getJSON("http://www.streamlive.to/server2.php?id=1415256036", function(json){
+		token= json.token;
+		setStream(token);		
+		
+});
+
+function setStream(token) {
+jwplayer("dplayer").setup({
+	id: 'dplayer',
+	controlbar: 'bottom',
+	provider: "rtmp",
+	'rtmp.tunneling':false,
+	bufferLength: "0.1",
+	token: token,
+       streamer: "rtmp:\/\/watch1.ilive.to:1935\/edge\/_definst_\/?xs=_we_MGk2ZTF3MnE0bm9uMDMxfDE0MTUyNTYzOTZ8MTQyLjE2Mi4xOTguMjEzfDU0NWIxN2U0MzQ1Y2J8NTEwN2I5NGJiMDRjZmI0N2Y3ZmY3NjBhYzA0YTkwMTgyZjE4YjY5Nw..",
+	file: "0i6e1w2q4non031.flv",
+	autostart: "true",
+       plugins: {
+	"http://www.streamlive.to/player/ilive-plugin.swf":{},
+	           "http://www.streamlive.to/player/ova/ova-jw.swf": {
+              "ads": {
+                 "schedule": [
+                     {
+                        "position": "pre-roll",
+                        "tag": "http://ad4.liverail.com/?LR_PUBLISHER_ID=12694&LR_PARTNERS=718572&LR_SCHEMA=vast2-vpaid&LR_AUTOPLAY=1&LR_MUTED=0&LR_URL=http://www.ilive.to/channels/52053/HGTV&LR_VIDEO_ID=52053&LR_TITLE=HGTV&LR_DESCRIPTION=HGTV&LR_VIDEO_URL=http://www.ilive.to/channels/52053/HGTV&LR_WIDTH=640&LR_HEIGHT=480"
+                     }
+                 ]
+              },
+              "debug": {
+                  "levels": "fatal, config, vast_template, vpaid, http_calls, playlist, api"
+              }
+           } 
+	       },
+	modes: [
+		{type: 'flash', src: 'http://www.streamlive.to/player/player_ilive_embed.swf'},
+		{
+			type: 'html5',
+			config: {
+				'file': 'http://23.92.70.42:1935/edge/0i6e1w2q4non031/playplist.m3u8',
+				'provider': 'video'
+			}
+		}
+	],
+       height: '100%',
+       width: '100%'
+});
+}
+</script>
+
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30790893-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+<script type="text/javascript">
+(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");
+(function() {
+var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+s.src = "http://cdn.engine.4dsply.com/Scripts/infinity.js.aspx";
+s.id = "infinity"; s.setAttribute("data-guid", "5b762da7-b2b6-45cb-8320-a0e6c8838675"); s.setAttribute("data-version", "async");
+var e = document.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e);
+})();
+</script>
+
+
+
+<script type='text/javascript' src='http://propellerpops.com/apu.php?zoneid=2751&lim=12'></script>
+
+<!-- PopAds.net Popunder Code for www.ilive.to -->
+<script type="text/javascript">
+  var _pop = _pop || [];
+  _pop.push(['siteId', 39060]);
+  _pop.push(['minBid', 0]);
+  _pop.push(['popundersPerIP', 0]);
+  _pop.push(['delayBetween', 0]);
+  _pop.push(['default', "PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KKGZ1bmN0aW9uKHMsbyxsLHYsZSxkKXtpZihzW29dPT1udWxsJiZzW2wrZV0pe3Nbb109ImxvYWRpbmciO3NbbCtlXShkLGw9ZnVuY3Rpb24oKXtzW29dPSJjb21wbGV0ZSI7c1t2K2VdKGQsbCwhMSl9LCExKX19KShkb2N1bWVudCwicmVhZHlTdGF0ZSIsImFkZCIsInJlbW92ZSIsIkV2ZW50TGlzdGVuZXIiLCJET01Db250ZW50TG9hZGVkIik7DQooZnVuY3Rpb24oKSB7DQp2YXIgcyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpOyBzLnR5cGUgPSAidGV4dC9qYXZhc2NyaXB0Ijsgcy5hc3luYyA9IHRydWU7DQpzLnNyYyA9ICJodHRwOi8vY2RuLmVuZ2luZS40ZHNwbHkuY29tL1NjcmlwdHMvaW5maW5pdHkuanMuYXNweCI7DQpzLmlkID0gImluZmluaXR5Ijsgcy5zZXRBdHRyaWJ1dGUoImRhdGEtZ3VpZCIsICI1Yjc2MmRhNy1iMmI2LTQ1Y2ItODMyMC1hMGU2Yzg4Mzg2NzUiKTsgcy5zZXRBdHRyaWJ1dGUoImRhdGEtdmVyc2lvbiIsICJhc3luYyIpOw0KdmFyIGUgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07IGUucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUocywgZSk7DQp9KSgpOw0KPC9zY3JpcHQ+"]);
+  _pop.push(['defaultPerDay', 0]);
+  _pop.push(['topmostLayer', true]);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    var s = document.getElementsByTagName('script')[0]; 
+    pa.src = '//c1.popads.net/pop.js';
+    pa.onerror = function() {
+      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+      sa.src = '//c2.popads.net/pop.js';
+      s.parentNode.insertBefore(sa, s);
+    };
+    s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+<!-- PopAds.net Popunder Code End -->
+
+<style>#c29a{position:fixed !important;position:absolute;top:2px;top:expression((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop)+"px");left:1px;width:100%;height:103%;background-color:#fff;opacity:.95;filter:alpha(opacity=95);display:block;padding:20% 0}#c29a *{text-align:center;margin:0 auto;display:block;filter:none;font:bold 14px Verdana,Arial,sans-serif;text-decoration:none}#c29a ~ *{display:none}</style><div id="c29a"><span>Please enable / Bitte aktiviere JavaScript!<br>Veuillez activer / Por favor activa el Javascript!<a href="http://is.gd/ndmArO">[ ? ]</a></span></div><script>window.document.getElementById("c29a").parentNode.removeChild(window.document.getElementById("c29a"));(function(l,m){function n(a){a&&c29a.nextFunction()}var h=l.document,p=["i","s","u"];n.prototype={rand:function(a){return Math.floor(Math.random()*a)},getElementBy:function(a,b){return a?h.getElementById(a):h.getElementsByTagName(b)},getStyle:function(a){var b=h.defaultView;return b&&b.getComputedStyle?b.getComputedStyle(a,null):a.currentStyle},deferExecution:function(a){setTimeout(a,250)},insert:function(a,b){var e=h.createElement("span"),d=h.body,c=d.childNodes.length,g=d.style,f=0,k=0;if("c29a"==b){e.setAttribute("id",b);g.margin=g.padding=0;g.height="100%";for(c=this.rand(c);f<c;f++)1==d.childNodes[f].nodeType&&(k=Math.max(k,parseFloat(this.getStyle(d.childNodes[f]).zIndex)||0));k&&(e.style.zIndex=k+1);c++}e.innerHTML=a;d.insertBefore(e,d.childNodes[c-1])},displayMessage:function(a){var b=this;a="abisuq".charAt(b.rand(5));b.insert("<"+a+'><img galleryimg=no  src="data:image/png;base64,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" height="66" width="432" alt="" /> <a href="http://www.ilive.to">[ ? ]</a>'+("</"+a+">"),"c29a");h.addEventListener&&b.deferExecution(function(){b.getElementBy("c29a").addEventListener("DOMNodeRemoved",function(){b.displayMessage()},!1)})},i:function(){for(var a="adTableCell,ad_img,adbody,head-ads,rightAd,top_ad_zone,widget_ad,ad,ads,adsense".split(","),b=a.length,e="",d=this,c=0,g="abisuq".charAt(d.rand(5));c<b;c++)d.getElementBy(a[c])||(e+="<"+g+' id="'+a[c]+'"></'+g+">");d.insert(e);d.deferExecution(function(){for(c=0;c<b;c++)if(null==d.getElementBy(a[c]).offsetParent||"none"==d.getStyle(d.getElementBy(a[c])).display)return d.displayMessage("#"+a[c]+"("+c+")");d.nextFunction()})},s:function(){var a={'pagead2.googlesyndic':'google_ad_client','js.adscale.de/getads':'adscale_slot_id','get.mirando.de/miran':'adPlaceId'},b=this,e=b.getElementBy(0,"script"),d=e.length-1,c,g,f,k;h.write=null;for(h.writeln=null;0<=d;--d)if(c=e[d].src.substr(7,20),a[c]!==m){f=h.createElement("script");f.type="text/javascript";f.src=e[d].src;g=a[c];l[g]=m;f.onload=f.onreadystatechange=function(){k=this;l[g]!==m||k.readyState&&"loaded"!==k.readyState&&"complete"!==k.readyState||(l[g]=f.onload=f.onreadystatechange=null,e[0].parentNode.removeChild(f))};e[0].parentNode.insertBefore(f,e[0]);b.deferExecution(function(){if(l[g]===m)return b.displayMessage(f.src);b.nextFunction()});return}b.nextFunction()},u:function(){var a="/ad-ina.,/ad_system/ad,/AdNewsclip15.,/buysellads.,/criteo_,/l
