@@ -1,5 +1,6 @@
-[B]Version 2.0.2[/B]
-- NFL Should link up good now.
-
-[B]Version 1.9.6[/B]
-- Fix Schedule
+Version 2.1.0	(11/06/14)
+*	Replaced my custom list of TV channels with more reliable scrapers.
+*	Added HQZone
+*	Fixed Wrestling and MMA Replays
+*	Added new sources
+*	Added Favourites function

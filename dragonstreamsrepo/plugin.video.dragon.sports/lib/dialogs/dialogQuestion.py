@@ -6,7 +6,7 @@ class DialogQuestion:
 
     def __init__(self):
         self.dlg = xbmcgui.Dialog()
-        self.head = 'DragonStreams Question'
+        self.head = '[COLOR=FF00FF00]Dragon Streams Question[/COLOR]'
 
     def ask(self, question):
         return self.dlg.yesno(self.head, question)

@@ -1,6 +1,6 @@
 # -*- coding: latin-1 -*-
 
-# Merge xSopcast and DragonStreams
+# Merge xSopcast and SportsDevil
 #http://forum.xbmc.org/showthread.php?tid=100031&pid=1101338#pid1101338
 
 #Freedocast fix
@@ -85,7 +85,7 @@ class Main:
         
         self.addon = None
         
-        common.log('DragonStreams initialized')
+        common.log('Dragon Streams initialized')
         
 
 
@@ -135,7 +135,7 @@ class Main:
             path = common.browseFolders(common.translate(30017))
             common.setSetting('download_path', path)
 
-        title = getKeyboard(default = fu.cleanFilename(title),heading='DragonStreams')
+        title = getKeyboard(default = fu.cleanFilename(title),heading='Dragon Streams')
         if title == None or title == '':
             return None
 
@@ -238,30 +238,38 @@ class Main:
             return None
 
         # if it's the main menu, add folder 'Favourites' and 'Custom Modules
-        #if url == self.MAIN_MENU_FILE:
-            #tmp = ListItem.create()
-            #tmp['title'] = '[COLOR green]Favourites[/COLOR]'
-            #tmp['type'] = 'rss'
-            #tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark.png')
-            #tmp['url'] = str(common.Paths.favouritesFile)
-            #tmpList.items.insert(0, tmp)
+        if url == self.MAIN_MENU_FILE:
+            tmp = ListItem.create()
+            tmp['title'] = '[COLOR=orange]Favourites[/COLOR]'
+            tmp['type'] = 'rss'
+            tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark.png')
+            tmp['url'] = str(common.Paths.favouritesFile)
+            tmpList.items.insert(0, tmp)
 
 
         # if it's the favourites menu, add item 'Add item'
-        #elif url == common.Paths.favouritesFile or url.startswith('favfolders'):
+        elif url == common.Paths.favouritesFile or url.startswith('favfolders'):
             
-            #if url.startswith('favfolders'):
-                #url = os.path.normpath(os.path.join(common.Paths.favouritesFolder, url)) 
+            if url.startswith('favfolders'):
+                url = os.path.normpath(os.path.join(common.Paths.favouritesFolder, url)) 
             
-            #tmp = ListItem.create()
-            #tmp['title'] = 'Add item...'
-            #tmp['type'] = 'command'
-            #tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark_add.png')
-            #action = 'RunPlugin(%s)' % (self.base + '?mode=' + str(Mode.ADDITEM) + '&url=' + url)
-            #tmp['url'] = action
-            #tmpList.items.append(tmp)
+            tmp = ListItem.create()
+            tmp['title'] = 'Add item...'
+            tmp['type'] = 'command'
+            tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark_add.png')
+            action = 'RunPlugin(%s)' % (self.base + '?mode=' + str(Mode.ADDITEM) + '&url=' + url)
+            tmp['url'] = action
+            tmpList.items.append(tmp)
         
-
+        # if it's the custom modules  menu, add item 'more...'
+        elif url == common.Paths.customModulesFile:            
+            tmp = ListItem.create()
+            tmp['title'] = 'more...'
+            tmp['type'] = 'command'
+            #tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark_add.png')
+            action = 'RunPlugin(%s)' % (self.base + '?mode=' + str(Mode.DOWNLOADCUSTOMMODULE) + '&url=')
+            tmp['url'] = action
+            tmpList.items.append(tmp)
 
 
         # Create menu or play, if it's a single video and autoplay is enabled
@@ -292,14 +300,14 @@ class Main:
     def downloadCustomModule(self):
         success = self.customModulesManager.downloadCustomModules()
         if success == True:            
-            # refresh container if DragonStreams is active
+            # refresh container if Dragon Streams is active
             currContainer = xbmcUtils.getContainerFolderPath()
-            common.showNotification('DragonStreams', 'Download Complete', 1000)
+            common.showNotification('Dragon Streams', 'Download successful', 1000)
             if currContainer.startswith(self.base):                
                 xbmc.executebuiltin('Container.Refresh()')
             return True
         elif success == False:        
-            common.showNotification('DragonStreams', 'Download Failed', 1000)
+            common.showNotification('Dragon Streams', 'Download failed', 1000)
         return False
 
 
@@ -312,7 +320,6 @@ class Main:
 
     def createXBMCListItem(self, item):
         title = enc.clean_safe(item['title'])
-		
 
         m_type = item['type']
 
@@ -444,7 +451,7 @@ class Main:
     
                 if lItem['title'] != "Favourites":
                         # Add to favourites
-                        contextMenuItem = createContextMenuItem('Add to DragonStreams favourites', Mode.ADDTOFAVOURITES, codedItem)
+                        contextMenuItem = createContextMenuItem('Add to Dragon Streams favourites', Mode.ADDTOFAVOURITES, codedItem)
                         contextMenuItems.append(contextMenuItem)
 
         liz = self.createXBMCListItem(lItem)
@@ -484,7 +491,7 @@ class Main:
         
         def checkForUpdates():
             updates = {}          
-            common.showNotification('DragonStreams', common.translate(30275))
+            common.showNotification('Dragon Streams', common.translate(30275))
             xbmcUtils.showBusyAnimation()
                  
             catchersUpdates = self.syncManager.getUpdates(SyncSourceType.CATCHERS, common.Paths.catchersDir)
@@ -500,7 +507,7 @@ class Main:
         def doUpdates(typeName, updates):
             count = len(updates)
             
-            head = "DragonStreams Updates - %s" % typeName
+            head = "Dragon Streams Updates - %s" % typeName
             
             msg = common.translate(30277)
             if count == 1:
@@ -538,7 +545,7 @@ class Main:
         allupdates = checkForUpdates()
         count = len(allupdates)
         if count == 0:
-            common.showNotification('DragonStreams', common.translate(30273))
+            common.showNotification('Dragon Streams', common.translate(30273))
             return
         else:
             for key, value in allupdates.items():
@@ -547,7 +554,7 @@ class Main:
 
     def queueAllVideos(self, item):
         dia = DialogProgress()
-        dia.create('DragonStreams', 'Get videos...' + item['title'])
+        dia.create('Dragon Streams', 'Get videos...' + item['title'])
         dia.update(0)
 
         items = self.getVideos(item, dia)
@@ -603,7 +610,7 @@ class Main:
         
         self.addon = Addon('plugin.video.dragon.sports', argv)
 
-        common.log('DragonStreams running')
+        common.log('Dragon Streams running')
         
         base = argv[0]
         handle = int(argv[1])
@@ -706,7 +713,7 @@ class Main:
                             
 
         except Exception, e:
-            common.showError('Error running DragonStreams')
-            common.log('Error running DragonStreams. Reason:' + str(e))
+            common.showError('Error running Dragon Streams')
+            common.log('Error running Dragon Streams. Reason:' + str(e))
 
 

@@ -141,9 +141,9 @@ class FavouritesManager:
                     value = m[index+1:]
 
                     index = value.find('|')
-                    if value[:index] == 'dragon.streams.locale':
+                    if value[:index] == 'dragon.sports.locale':
                         value = common.translate(int(value[index+1:]))
-                    elif value[:index] == 'dragon.streams.image':
+                    elif value[:index] == 'dragon.sports.image':
                         value = os.path.join(common.Paths.imgDir, value[index+1:])
 
                     if key == 'title':
@@ -163,18 +163,18 @@ class FavouritesManager:
 # ----------------------------------------------------------
 # Add item
 # ----------------------------------------------------------
-    #def add(self, rootFolder=None):
-        #menuItems = ["Add folder", "Add DragonStreams item", "Add xbmc favourite"]
-        #select = xbmcgui.Dialog().select('Choose', menuItems)
-        #if select == 0:
-            #name = getKeyboard(default = '', heading = 'Set name')
-            #if name and len(name) > 0:
-                #return self._addFolder(name, rootFolder)
-        #elif select == 1:
-            #common.showInfo('Please browse through DragonStreams and use \ncontext menu entry "Add to DragonStreams favourites"')
-        #elif select == 2:
-            #return self._addXbmcFavourite(rootFolder)
-        #return False
+    def add(self, rootFolder=None):
+        menuItems = ["Add folder", "Add Dragon Streams item", "Add xbmc favourite"]
+        select = xbmcgui.Dialog().select('Choose', menuItems)
+        if select == 0:
+            name = getKeyboard(default = '', heading = 'Set name')
+            if name and len(name) > 0:
+                return self._addFolder(name, rootFolder)
+        elif select == 1:
+            common.showInfo('Please browse through Dragon Streams and use \ncontext menu entry "Add to Dragon Streams favourites"')
+        elif select == 2:
+            return self._addXbmcFavourite(rootFolder)
+        return False
 
 
     def _addXbmcFavourite(self, root):      

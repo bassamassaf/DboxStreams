@@ -166,6 +166,7 @@ class Parser(object):
             ignoreCache = False
             demystify = False
             startUrl = inputList.curr_url
+            #print inputList, lItem
             while count == 0 and i <= maxits:
                 if i > 1:
                     ignoreCache = True
@@ -175,12 +176,13 @@ class Parser(object):
                 items = self.__parseHtml(inputList.curr_url, '"' + inputList.curr_url + '"', inputList.rules, inputList.skill, inputList.cfg, lItem)
                 count = len(items)
 
+
                 # try to find items in html source code
                 if count == 0:
                     referer = ''
                     if lItem['referer']:
                         referer = lItem['referer']
-                    data = common.getHTML(inputList.curr_url, referer, ignoreCache, demystify)
+                    data = common.getHTML(inputList.curr_url, None, referer, ignoreCache, demystify)
                     if data == '':
                         return False
 
@@ -221,10 +223,10 @@ class Parser(object):
                         streamId = firstJS[0]
                         jsUrl = firstJS[1]
                         streamerName = getHostName(jsUrl)
-                        jsSource = getHTML(jsUrl, startUrl, True, False)
+                        jsSource = getHTML(jsUrl, None, startUrl, True, False)
                         phpUrl = findPHP(jsSource, streamId)
                         if phpUrl:
-                            data = getHTML(phpUrl, startUrl, True, True)
+                            data = getHTML(phpUrl, None, startUrl, True, True)
                             item = self.__findRTMP(data, phpUrl, lItem)
                             if item:
                                 
@@ -246,7 +248,7 @@ class Parser(object):
                         swfUrl = vcods[3]
                         unixTS = str(dt.getUnixTimestamp())
                         sUrl = sUrl + '?callback=jQuery1707757964063647694_1347894980192&v_cod1=' + cod1 + '&v_cod2=' + cod2 + '&_=' + unixTS
-                        tmpData = getHTML(sUrl, urllib.unquote_plus(startUrl), True, False)
+                        tmpData = getHTML(sUrl, None, urllib.unquote_plus(startUrl), True, False)
                         if tmpData and tmpData.find("Bad Request") == -1:
                             newReg = '"result1":"([^\"]+)","result2":"([^\"]+)"'
                             link = regexUtils.findall(tmpData, newReg)
@@ -317,7 +319,7 @@ class Parser(object):
 
 
     def __findRedirect(self, page, referer='', demystify=False):
-        data = common.getHTML(page, referer = referer, demystify = demystify)
+        data = common.getHTML(page, None, referer = referer, demystify = demystify)
 
         link = findVideoFrameLink(page, data)
         if link:
@@ -664,6 +666,11 @@ class Parser(object):
             elif command == 'camelcase':
                 src = enc.smart_unicode(src)
                 src = string.capwords(string.capwords(src, '-'))
+				
+            elif command == 'demystify':
+                print 'demystify'
+                src = crypt.doDemystify(src)
+                print 'after demystify',src
 
             elif command == 'random':
                 paramArr = params.split(',')
@@ -687,7 +694,7 @@ class Parser(object):
                 a = int(a)
                 b = int(b)
                 try:
-                    src = a/b
+                    src = str(a/b)
                 except:
                     pass
                 

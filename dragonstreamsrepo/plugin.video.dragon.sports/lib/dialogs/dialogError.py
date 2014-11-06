@@ -6,7 +6,7 @@ class DialogError:
 
     def __init__(self):
         self.dlg = xbmcgui.Dialog()
-        self.head = 'DragonStreams Error'
+        self.head = '[COLOR=FF00FF00]Dragon Streams Error[/COLOR]'
 
     def show(self, message):
         self.dlg.ok(self.head, message)
