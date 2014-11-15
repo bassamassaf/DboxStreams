@@ -242,7 +242,7 @@ class Main:
             tmp = ListItem.create()
             tmp['title'] = '[COLOR=orange]Favourites[/COLOR]'
             tmp['type'] = 'rss'
-            tmp['icon'] = os.path.join(common.Paths.imgDir, 'bookmark.png')
+            tmp['icon'] = os.path.join(common.Paths.imgDir, 'icon.png')
             tmp['url'] = str(common.Paths.favouritesFile)
             tmpList.items.insert(0, tmp)
 
