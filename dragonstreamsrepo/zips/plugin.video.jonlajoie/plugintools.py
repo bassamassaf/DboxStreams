@@ -18,7 +18,7 @@ import urllib2
 import re
 import sys
 
-settings = xbmcaddon.Addon(id='plugin.video.devinsupertramp')
+settings = xbmcaddon.Addon(id='plugin.video.jonlajoie')
 language = settings.getLocalizedString
 
 module_log_enabled = False

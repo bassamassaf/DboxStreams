@@ -28,12 +28,13 @@ def run():
     plugintools.close_item_list()
 
 # Main menu
+
 def main_list(params):
     plugintools.log("jonlajoie.main_list "+repr(params))
 
     # On first page, pagination parameters are fixed
     if params.get("url") is None:
-        params["url"] = "http://gdata.youtube.com/feeds/api/users/"+YOUTUBE_CHANNEL_ID+"/uploads?start-index=1&max-results=10"
+        params["url"] = "http://gdata.youtube.com/feeds/api/users/"+YOUTUBE_CHANNEL_ID+"/uploads?start-index=1&max-results=13"
 
     # Fetch video list from YouTube feed
     data = plugintools.read( params.get("url") )

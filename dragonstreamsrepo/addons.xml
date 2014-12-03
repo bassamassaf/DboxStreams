@@ -59,7 +59,7 @@
 
 <addon
   id="plugin.video.dragon.sports"
-  version="3.0.1"
+  version="3.0.2"
   name="Dragon Streams"
   provider-name="Unknown">
   <requires>
@@ -81,7 +81,7 @@
 <addon id="plugin.video.jonlajoie"
 	name="Jon Lajoie"
 	version="1.0.3b"
-	provider-name="DragonBox">
+	provider-name="Dragon Streams">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
@@ -93,6 +93,26 @@
     <summary lang="en">Jon Lajoie</summary>
     <description lang="en">My name is Jon, I am from Montreal, Canada, and I make videos once in a while. I also act on a show called "The League," and I tour sometimes. Want to be my friend? www.jonlajoie.com</description>
     <platform>all</platform>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.pug"
+	name="The Pug Head Tilt Pugs!"
+	version="1.0.3"
+	provider-name="Dragon Streams">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">The Pug Head Tilt Pugs!</summary>
+    <description lang="en">Head-tilting pugs extraordinaire! You may have witnessed our antics on The Tonight Show, Ellen, Regis & Kelly, GMA, Animal Planet & YouTube. Support Pug Rescue!</description>
+    <platform>all</platform>
+    <forum>http://forum.none.com</forum>
     <website>http://www.thedragonbox.com/</website>
   </extension>
 </addon>

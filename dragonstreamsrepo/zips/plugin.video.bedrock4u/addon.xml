@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.bedrock4u"
+	name="The Pug Head Tilt Pugs!"
+	version="1.0.3b"
+	provider-name="Dragon Streams">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">The Pug Head Tilt Pugs</summary>
+    <description lang="en">Head-tilting pugs extraordinaire</description>
+    <platform>all</platform>
+    <forum>http://forum.none.com</forum>
+    <website>http://www.thedragonbox.com/</website>
+  </extension>
+</addon>

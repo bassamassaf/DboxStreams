@@ -4,7 +4,7 @@ item_info_build=GoodCast - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://goodcast.pw/stream.php?id=%s&width=640&height=480
+item_info_build=http://goodcast.org/stream.php?id=%s&width=640&height=480
 
 item_info_name=tmp
 item_info_from=pageUrl

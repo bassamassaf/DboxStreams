@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.jonlajoie"
 	name="Jon Lajoie"
-	version="1.0.3"
-	provider-name="DragonBox">
+	version="1.0.3b"
+	provider-name="Dragon Streams">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>

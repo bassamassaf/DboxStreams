@@ -21,5 +21,5 @@ item_info_convert=getInfo('%s','.*file=([^&]+)&amp;streamer=([^&]+)&.*','http://
 item_info_build=%s
 
 item_info_name=url
-item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://bernardotv.club/atdedead.swf live=1 token=#atd%#$ZH timeout=14 swfVfy=1 pageUrl=' + playUrl
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://static.surk.tv/atdedead.swf live=1 token=#atd%#$ZH timeout=14 swfVfy=1 pageUrl=' + playUrl
 item_info_build=%s
